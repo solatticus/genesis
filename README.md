@@ -7,7 +7,7 @@ An exploritory orchestration-based code generation tool. Data from pretty much a
 * [Visual Studio Win/Mac 2019](https://visualstudio.com "Visual Studio Win/Mac 2019") 
 
 ## How does it work?
-Genesis is centered around a group of ObjectGraph objects and pieces of code that manipulate them, called [Executors](https://github.com/genesisdotnet/genesis/blob/master/src/Genesis/GenesisExecutor.cs). They describe objects, their properties and methods, events... datatypes of each... etc. 
+Genesis is centered around a group of [ObjectGraph](https://github.com/solatticus/genesis/blob/master/src/Genesis/ObjectGraph.cs) objects and pieces of code that manipulate them, called [Executors](https://github.com/genesisdotnet/genesis/blob/master/src/Genesis/GenesisExecutor.cs). So far there are 3 types of Executors that manipulate ObjectGraphs, their properties and methods, events... and types of each... etc. 
 
 ##### `Input` executors deal with a "source". (intentionally arbitrary) 
 They're responsible for interrogating some data store (or weburl, or text file, or...) and populating a group of ObjectGraphs described above. They're available to all other executors at any point. It's currently serial execution, via multicast delegate.
